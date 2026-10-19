@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Environment — never commit real secrets
+.env
+
+# Frontend build output
+frontend/dist/
+
+# Uploaded proof files — not committed
+backend/uploads/proofs/
+
+# Logs
+*.log
+npm-debug.log*

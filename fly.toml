@@ -1,0 +1,25 @@
+app = 'walkathon-2026'
+primary_region = 'sin'
+
+[build]
+
+[env]
+  PORT = '5000'
+  NODE_ENV = 'production'
+  DATA_FILE = '/data/db.json'
+
+[http_service]
+  internal_port = 5000
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+[[mounts]]
+  source = 'walkathon_data'
+  destination = '/data'
+
+[[vm]]
+  memory = '256mb'
+  cpu_kind = 'shared'
+  cpus = 1
